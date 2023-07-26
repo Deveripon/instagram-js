@@ -512,6 +512,8 @@
   bottom: 0;
   right: 0;
   background: #080808c7;
+  overflow: hidden;
+  display: none;
 
   .modal {
     background: #262626;
@@ -535,6 +537,149 @@
         "Helvetica Neue", sans-serif;
       font-size: 16px;
       font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 20px;
+
+      .back {
+        color: #ffff;
+        transition: .1s all;
+
+        &:hover {
+          color: #0c55b6;
+        }
+      }
+
+      .next {
+        color: #2d81ee;
+        font-weight: 600;
+        font-size: 17px;
+        transition: .1s all;
+        opacity: 0;
+        cursor: unset;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      #submit {
+        color: #2d81ee;
+        font-weight: 600;
+        font-size: 17px;
+        transition: .1s all;
+        width: 60px;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .modal-body {
+      height: 100%;
+      width: 100%;
+
+      .media-preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+      }
+
+      .media-uploader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+
+        img {
+          width: 100px;
+        }
+
+        p {
+          color: #fff;
+          margin-top: 20px;
+          margin-bottom: 20px;
+
+        }
+
+        label {
+          background: #1a67ca;
+          padding: 7px 10px;
+          font-size: 15px;
+          color: #fff;
+          font-weight: 600;
+          margin-top: 25px;
+          border-radius: 10px;
+          transition: .2s all;
+          margin-top: 20px;
+
+          &:hover {
+            background: #0c55b6;
+          }
+        }
+      }
+
+      .post-content {
+        width: 35vw;
+        height: 60vh;
+        margin-top: 20px !important;
+
+        .user {
+          display: flex;
+          gap: 10px;
+
+          img {
+            height: 30px;
+            width: 30px;
+            border-radius: 100%;
+          }
+
+          h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
+
+        textarea {
+          background: transparent;
+          font-size: 16px;
+          margin-top: 20px;
+          outline: none;
+          color: #fff;
+        }
+
+        .options {
+          ul {
+            li {
+              display: flex;
+              justify-content: space-between;
+              padding-right: 50px;
+              margin: 10px auto;
+
+              a {
+                color: #ccc;
+              }
+
+              select {
+                background: transparent;
+                color: #fff;
+                margin: 10px 0px;
+                outline: none;
+              }
+
+            }
+          }
+        }
+
+      }
     }
   }
 }

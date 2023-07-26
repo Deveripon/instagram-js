@@ -64,7 +64,7 @@
               <span>Notifications</span>
             </a>
           </li>
-          <li>
+          <li id="createButton">
             <a href="#">
               <img src="./public/assets/images/tab.png" alt="">
               <span>Create</span>
@@ -429,11 +429,59 @@
     </div>
   </div>
   <div class="create-post-modal">
-    <div class="modal">
-      <div class="modal-header">
-        <p>Create new post</p>
+    <form action="" class="create-post-form">
+      <div class="modal">
+        <div class="modal-header">
+          <button class="back"><i class="fa-solid fa-arrow-left-long"></i></button>
+          <p>Create new post</p>
+          <button class="next">Next</button>
+          <input id="submit" type="submit" value="Share">
+        </div>
+        <div class="modal-body">
+          <div class="media-uploader">
+            <img src="./public/assets/images/media (1).png" alt="">
+
+            <p>Drag photos and videos here</p>
+
+            <label for="media">Select from computer <input name="file" type="file" class="hidden" id="media"></label>
+
+          </div>
+          <div class="media-preview">
+            <img src="" alt="">
+          </div>
+          <div class="post-content">
+            <div class="user">
+              <img src="./public/assets/images/user.jpg" alt="">
+              <h4>shahadat_hussain_ripon</h4>
+            </div>
+            <textarea name="content" id="content" cols="37" rows="5" placeholder="Write a caption..."></textarea>
+            <div class="options">
+
+              <ul>
+                <li>
+                  <a href="#">Add Location</a>
+                  <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </a>
+                </li>
+                <li>
+                  <select name="accessibility" id="accessibility">
+                    <option value="accessibility">Accesibility</option>
+                  </select>
+                </li>
+                <li>
+                  <select name="settings" id="">
+                    <option value="settings">Advanced settings</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 
   <!-- javascript files -->
