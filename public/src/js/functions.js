@@ -24,33 +24,30 @@ function validatePassword(password) {
 
 function WarnalertMassage(massage) {
   return `
-  <div class="alert-box transform transition-all duration-500 w-96 bg-orange-300 flex p-2 items-center">
+  <div class="alert-box transform transition-all duration-500 w-full bg-red-400 flex px-3 pt-1 items-center">
   <div class="icon mr-3">
-     <i class="fa-solid fa-circle-exclamation text-red-500 "></i>
+    <i class="fa-solid fa-circle-exclamation text-red-500 "></i>
   </div>
-  <div class="massage">
-     <p class="text-gray-600">${massage}</p>
+  <div class="massage" style="display: flex; justify-content: space-between; width: 100%;">
+    <div class="alert-mass">
+      <p style="font-size:14px" class="text-gray-900">${massage}</p>
+    </div>
+    <div class="close-button ml-3 transform transition-all cursor-pointer hover:text-orange-600 duration-300"
+      onclick="closeAlert()">
+      <i class="fa-regular fa-circle-xmark text-red-800 "></i>
+    </div>
   </div>
-  <div
-    class="close-button place-self-end ml-3 transform transition-all cursor-pointer hover:text-orange-600 duration-300"
-    onclick="closeAlert()"
-  >
-    <i class="fa-regular fa-circle-xmark text-red-800 "></i>
-  </div>
-</div>
 
+</div>
 `;
 }
 //success message
 function successalertMassage(massage) {
   return `
-  <div class="alert-box transform transition-all duration-500 w-96 bg-green-300 flex p-2 items-center">
-  <div class="icon mr-3">
-     <i class="fa-solid fa-thumbs-up text-green-800"></i>
+  <div>
+    ${massage}
   </div>
-  <div class="massage">
-     <p class="text-gray-600">${massage}</p>
-  </div>
+
   <div
     class="close-button place-self-end ml-3 transform transition-all cursor-pointer hover:text-orange-600 duration-300"
     onclick="closeAlert()"
@@ -66,9 +63,9 @@ function successalertMassage(massage) {
 
 function sendData(key, data) {
   let userData = [];
-  let lsData = localStorage.getItem(key)
-    ? JSON.parse(localStorage.getItem(key))
-    : null;
+  let lsData = localStorage.getItem(key) ?
+    JSON.parse(localStorage.getItem(key)) :
+    null;
   if (!lsData) {
     userData.push(data);
     localStorage.setItem(key, JSON.stringify(userData));
@@ -81,8 +78,7 @@ function sendData(key, data) {
 
 //data get from localStorage
 function getData(key) {
-  return localStorage.getItem(key)
-    ? JSON.parse(localStorage.getItem(key))
-    : false;
+  return localStorage.getItem(key) ?
+    JSON.parse(localStorage.getItem(key)) :
+    false;
 }
-

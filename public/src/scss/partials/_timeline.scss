@@ -259,11 +259,10 @@
       .post-body {
         .post-media {
           width: 35vw;
-          height: 80vh;
           background: #000;
           margin-top: 20px;
           border: 1px solid #ccc;
-          border-radius: 5px;
+          border-radius: 7px;
 
           @media all and(max-width:1018px) {
             width: 60vw;
@@ -273,6 +272,7 @@
             max-height: 100%;
             max-width: 100%;
             margin: auto;
+            border-radius: 7px;
           }
         }
       }
@@ -527,6 +527,7 @@
     margin: auto;
     border-radius: 15px;
 
+
     .modal-header {
       text-align: center;
       padding: 10px;
@@ -666,6 +667,7 @@
 
               a {
                 color: #ccc;
+                font-size: 14px;
               }
 
               select {
@@ -673,6 +675,7 @@
                 color: #fff;
                 margin: 10px 0px;
                 outline: none;
+                font-size: 14px;
               }
 
             }
@@ -681,5 +684,78 @@
 
       }
     }
+  }
+
+  .cancel-dialog {
+    position: absolute;
+    color: #fff;
+    background: rgba(95, 95, 95, 0.055);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+
+    .dialog-box {
+      width: 300px;
+      position: absolute;
+      background: #363636;
+      top: 30%;
+      left: 41%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      display: none;
+
+      h4 {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+
+      p {
+        font-size: 13px;
+        padding: 0px 20px;
+        color: #929191;
+        margin-bottom: 20px;
+
+      }
+
+      button {
+        border-top: 1px solid #ccc;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        vertical-align: middle;
+        padding: 10px 0px;
+      }
+
+      .discard {
+        color: rgba(255, 1, 85, 0.925);
+      }
+    }
+
+  }
+}
+
+.post-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30%;
+
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
   }
 }
