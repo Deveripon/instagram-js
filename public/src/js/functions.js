@@ -82,3 +82,7 @@ function getData(key) {
     JSON.parse(localStorage.getItem(key)) :
     false;
 }
+
+
+//data delete from localStorage
+

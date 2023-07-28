@@ -204,6 +204,7 @@
         width: 35vw;
         padding-top: 2vw;
 
+
         @media all and(max-width:1018px) {
           width: 60vw;
         }
@@ -211,6 +212,7 @@
         .post-header {
           display: flex;
           justify-content: space-between;
+
 
           .left {
             display: flex;
@@ -280,6 +282,10 @@
       .post-footer {
         margin-top: 10px;
         width: 35vw;
+
+        @media all and(max-width:1018px) {
+          width: 60vw;
+        }
 
         .footer-top {
           display: flex;
@@ -758,4 +764,63 @@
     font-size: 15px;
     font-weight: 500;
   }
+}
+
+.post-option-dialog {
+  position: absolute;
+  color: #fff;
+  background: #080808e0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: none;
+
+  .option-dialog-box {
+    width: 330px;
+    height: 400px;
+    position: absolute;
+    background: #363636;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+
+    h4 {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+
+    p {
+      font-size: 13px;
+      padding: 0px 20px;
+      color: #929191;
+      margin-bottom: 20px;
+
+    }
+
+    button {
+      border-top: 1px solid #ccc;
+      width: 100%;
+      font-size: 12px;
+      font-weight: normal;
+      vertical-align: middle;
+      padding: 10px 0px;
+    }
+
+    .delete {
+      color: rgba(255, 1, 85, 0.925);
+      border-top: none;
+
+    }
+  }
+
 }
